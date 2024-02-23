@@ -16,7 +16,7 @@ public class quiz <cow>
     }
 
     public static void main(String[] args) {
-        quiz<int> q = new quiz<int>();
+        quiz<int> q = new quiz<int>(); //must be Integer to compile
         q.enqueue(5);
         q.enqueue(6);
         q.enqueue(7);
