@@ -12,9 +12,10 @@ public class StackDriver
         stack.push(4);
         System.out.println(stack.toString());
         stack.pop();
+        System.out.println(stack.toString());
         System.out.println("Peek: " + stack.peek());
         System.out.println(stack.toString());
-        System.out.println(stack.getSize());
+        System.out.println("Size: " + stack.getSize());
         
 
     }

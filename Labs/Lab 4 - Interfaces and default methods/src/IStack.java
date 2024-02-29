@@ -50,7 +50,7 @@ public interface IStack<T>
      */
     public default void push(T value) {
         ArrayList<T> stack = getElements();
-        if(getSize()==getCapacity()) {
+        if(getElements().size()==getCapacity()) {
             stack.remove(0);            
         }
         stack.add(value); //mutates elements arraylist
@@ -68,8 +68,8 @@ public interface IStack<T>
      */
     public default T pop() {
         ArrayList<T> stack = getElements();
-        T element = stack.get(getSize());
-        stack.remove(getSize()-1); //mutates elements arraylist
+        T element = stack.get(getElements().size()-1);
+        stack.remove(getElements().size()-1); //mutates elements arraylist
         return element;
     }
 
@@ -83,7 +83,7 @@ public interface IStack<T>
      * @post peek = [The item last pushed into the stack] AND self = #self AND #size = #size
      */
     public default T peek() {
-        return getElements().get(getSize()-1);
+        return getElements().get(getElements().size()-1);
     }
 
     /**
@@ -96,7 +96,6 @@ public interface IStack<T>
      * @post getSize = |self| AND self = #self AND #size = #size
      */
     public default int getSize(){
-        System.out.println(toString()+" getSize:"+getElements().size());
         return getElements().size();
     }
 }
