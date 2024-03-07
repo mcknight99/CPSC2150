@@ -13,6 +13,32 @@ import java.util.ArrayList;
  * @constraints size > 0 AND 0 <= |self| <= size
  *
  * @initialization_ensures an empty stack is created with a max number of elements the stack can hold equal to size
+ * 
+ *  * @defines – Used to “hint at” private data contained within a class.
+ * @constraints – the “invariant” of the interface. This “invariant” would be
+ *              true for all
+ *              possible implementation of the interface, “always”.
+ * @initialization_ensures – what is going to be true about any class that
+ *                         implements the
+ *                         interface after the constructor is called.
+ * @defines hints at the fact that any implementation is going to have “some
+ *          kind of private data used to represent the max number of elements”.
+ *          This means, instead of referring directly to the private data,
+ *          capacity and elements, we can instead
+ *          refer to this “max number of elements” as “size”, and the data
+ *          structure that makes up the stack as “self”.
+ * 
+ * @constraints is the “invariant” for all possible implementations; the
+ *              interface. It is what
+ *              must “always” (and remember what quote “always” end-quote means)
+ *              be true about the state of any implementing object, regardless
+ *              of what implementation I use. Often, my @constraints are the
+ *              same as any implementing classes @invariant except
+ *              the @constraint still can’t refer to private data, so it uses
+ *              the data we hinted at in the @defines instead.
+ * @initializtion_ensures is effectively an abstract way
+ *                        of writing the postcondition for all possible
+ *                        implementations’ constructors.
  */
 public interface IStack<T>
 {
@@ -51,7 +77,7 @@ public interface IStack<T>
     public default void push(T value) {
         ArrayList<T> stack = getElements();
         if(getElements().size()==getCapacity()) {
-            stack.remove(0);            
+            stack.remove(0); //mutates elements arraylist
         }
         stack.add(value); //mutates elements arraylist
     }
@@ -68,7 +94,7 @@ public interface IStack<T>
      */
     public default T pop() {
         ArrayList<T> stack = getElements();
-        T element = stack.get(getElements().size()-1);
+        T element = stack.get(getElements().size()-1); 
         stack.remove(getElements().size()-1); //mutates elements arraylist
         return element;
     }

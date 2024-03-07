@@ -9,6 +9,10 @@ import java.util.ArrayList;
  *
  * @corresponds size = capacity
  *
+ * 
+ * @corresponds are used to tie our private data variables in the implementation
+ *              to the abstract concepts that appear in our interface
+ *              specification.
  */
 public class GenericStack<T> implements IStack<T>{
     private ArrayList<T> elements;
