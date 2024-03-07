@@ -43,7 +43,7 @@ class Testing {
      * Test routine cases, common, expected inputs
      * test challenging cases
      * Don't need to test for things that are destined to fail (ex. dividing by
-     * zero)
+     * zero or non precondition)
      * 
      * 
      * Blackbox vs Whitebox testing
