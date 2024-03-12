@@ -1,7 +1,9 @@
+package lab4;
+
 public class StackDriver
 {
     public static void main(String[] args) {
-        //Create a GenericStack of Integers with a capacity of 3
+        //Create a lab4.GenericStack of Integers with a capacity of 3
         IStack<Integer> stack = new GenericStack<>(3);
         stack.push(1);
         System.out.println(stack.toString());

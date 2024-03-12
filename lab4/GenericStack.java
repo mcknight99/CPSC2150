@@ -1,7 +1,9 @@
+package lab4;
+
 import java.util.ArrayList;
 
 /**
- * A generic stack class, which implements the IStack interface.
+ * A generic stack class, which implements the lab4.IStack interface.
  *
  * @param <T> the type of elements in the stack
  *

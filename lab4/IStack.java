@@ -1,3 +1,5 @@
+package lab4;
+
 import java.util.ArrayList;
 
 /**
@@ -13,7 +15,6 @@ import java.util.ArrayList;
  * @constraints size > 0 AND 0 <= |self| <= size
  *
  * @initialization_ensures an empty stack is created with a max number of elements the stack can hold equal to size
- * 
  *  * @defines – Used to “hint at” private data contained within a class.
  * @constraints – the “invariant” of the interface. This “invariant” would be
  *              true for all
