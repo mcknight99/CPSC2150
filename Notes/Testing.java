@@ -81,6 +81,8 @@ class Testing {
      * The assert is false when the test case fails because the boolean expression
      * returned false, halting the test execution
      * 
+     * assertEquals(Obj expected, Obj actual)
+     * assertTrue(boolean)
      */
 
 }
